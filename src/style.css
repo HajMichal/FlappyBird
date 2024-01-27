@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: skyblue;
+}
+#dashboard {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#score {
+  display: none;
+  font-size: 24px;
+}
+
+#bird {
+  --bird-top: 0px;
+  --bird-size: 60px;
+  position: absolute;
+  top: calc(var(--bird-top) * 1px);
+  width: var(--bird-size);
+  height: var(--bird-size);
+  left: var(--bird-size);
+  background-image: url("/bird.png");
+  object-fit: fill;
+  border-radius: 25% 70% 70% 25%;
+  transition: 0.3s;
+  z-index: 99999; 
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  margin: -33px;
+}
+
+#eye {
+  position: absolute;
+  right: 25%;
+  border-radius: 25% 70% 70% 25%;
+  top: 20%;
+  width: 7px;
+  height: 7px;
+  background-color: hsl(0, 100%, 49%);
+}
+#beak {
+  position: absolute;
+  top: 100%;
+  left: 200%;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  
+  border-left: 15px solid hsl(28, 100%, 50%);
+}
+.pipe {
+  --pipe-left: 500;
+  --hole-height: 120;
+  --hole-top: 300;
+  height: 100vh;
+  width: 100px;
+  position: absolute;
+  left: calc(var(--pipe-left) * 1px);
+  top:0;
+  bottom: 0;
+  display: block;
+  background-color: hsl(119, 96%, 32%);
+}
+
+.hole {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: calc(var(--hole-top) * 1px);
+  background-color: skyblue;
+}
