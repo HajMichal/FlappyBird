@@ -2,4 +2,4 @@
 <br/>
 
 
-This project demonstrates my JavaScript/TypeScript and CSS skills 
+This project demonstrates my JavaScript/TypeScript skills 
