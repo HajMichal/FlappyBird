@@ -1,6 +1,7 @@
+import { Bird } from './bird'
+import { Game } from './menu'
 import './style.css'
-import { birdJump, setStartPosition } from './bird'
-import { handleStart } from './menu'
+
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -15,6 +16,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 
-birdJump()
-handleStart()
-setStartPosition()
+const bird = new Bird()
+const game = new Game()
+
+bird.setStartPosition()
+game.handleStart()
+bird.birdJump()
